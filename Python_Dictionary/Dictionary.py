@@ -5,8 +5,8 @@ fruit = {"orange": "a sweet, orange, citrus fruit",
          "lime": "a sour , green citrus fruit",
          "apple": "round and crunchy"}
 
-print(fruit)
-print(fruit["lemon"])
+# print(fruit)
+# print(fruit["lemon"])
 
 # # to add new value to dictionary
 # fruit["pear"] = "an odd shaped apple"
@@ -19,7 +19,7 @@ print(fruit["lemon"])
 # print(fruit)
 # fruit.clear()
 # cant use del fruit as ir creates an error
-print(fruit)
+# print(fruit)
 # while True:
 #     dic_key = input("Please enter a fruit")
 #     if dic_key == "quit":
@@ -47,18 +47,31 @@ print(fruit)
 # for f in ordered_keys:
 #     print(f + " = " + fruit[f])
 
-for f in sorted(fruit.keys()):
-    print(f + " = " + fruit[f])
-
-# not an very efficent way to
-# for val in fruit.values():
-#     print(val)
+# for f in sorted(fruit.keys()):
+#     print(f + " = " + fruit[f])
 #
-# for key in fruit:
-#     print(fruit[key])
+# # not an very efficent way to
+# # for val in fruit.values():
+# #     print(val)
+# #
+# # for key in fruit:
+# #     print(fruit[key])
+#
+# fruit_keys = fruit.keys()
+# print(fruit_keys)
+#
+# fruit["tomato"] = "not nice with ice cream"
+# print(fruit_keys)
 
-fruit_keys = fruit.keys()
-print(fruit_keys)
+print(fruit)
+print(fruit.items())
+f_tuple = tuple(fruit.items())
+print(f_tuple)
 
-fruit["tomato"] = "not nice with ice cream"
-print(fruit_keys)
+
+for snack in f_tuple:
+    item, description = snack
+    print(item + " is "+ description)
+
+# a way in which tuple can be changed into tuples
+print(dict(f_tuple))
