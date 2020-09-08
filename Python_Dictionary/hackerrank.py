@@ -81,3 +81,9 @@
 #         i = i+1
 #     print("{:.2f}".format(ans/3))
 
+if __name__ == '__main__':
+    N = int(input())
+    arr = []
+    while True:
+        cmd = input()
+        if cmd == insert
